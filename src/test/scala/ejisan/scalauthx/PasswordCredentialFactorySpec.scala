@@ -6,7 +6,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import org.specs2.mutable.Specification
 
 class PasswordCredentialFactorySpec extends Specification {
-  val factory = PasswordCredentialFactory(
+  val factory = HashedCredentialFactory(
     0, "PBKDF2WithHmacSHA512", "NativePRNGNonBlocking", 16, 16, 5000)
   val timeout = 10.second
 
